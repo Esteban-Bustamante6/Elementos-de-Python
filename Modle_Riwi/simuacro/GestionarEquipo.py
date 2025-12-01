@@ -33,7 +33,7 @@ def Registro_Equipos():
                 equipo["Categoria"]= categoria
                 print(equipo)
             else:
-                equipo.get(categoria, "no encontrada")
+                
 
             
         except ValueError:
