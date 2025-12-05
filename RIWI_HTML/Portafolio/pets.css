@@ -1,0 +1,376 @@
+body {
+    
+    margin: 0; 
+    padding: 0;
+}
+
+/* Encabezado Principal */
+#EBL {
+    border-radius: 2px;
+    background-color: antiquewhite;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 20px;
+    box-sizing: border-box; 
+}
+
+/* Contenido Principal de la Página */
+#Page {
+    font-family: sans-serif;
+    margin-top: 2rem;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+    padding: 10px;
+}
+
+/* Desplazamiento de la página cuando UN menú está activo */
+#Menu:checked ~ #Page,
+#Menu2:checked ~ #Page {
+    margin-left: 250px;
+}
+
+/* =========================================
+. TOOLTIP Y PHOTO ICONO (Header)*/
+
+.tooltip-box {
+    opacity: 0;             
+    visibility: hidden;     
+    transition: opacity 0.3s; /* Transición ajustada a 0.3s */
+    position: relative;
+    color: #fff;
+    font-size: 0.3em;
+    padding: 0px 0px;
+    left: 100px;
+    border-radius: 4px;
+    
+    
+}
+
+.tooltip-container:hover .tooltip-box {
+    opacity: 1;             
+    visibility: visible;
+}
+
+#E{
+    position: relative;
+    top: -2px;
+    color: black;
+    margin: 0;
+    font-size: 1.8em;
+    left: 80px;
+}
+.photo{
+    position: relative;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    top: 0; 
+    left: -700px; 
+    margin-left: 10px;
+}
+
+/* =========================================
+MENÚ PRINCIPAL (DATOS PERSONALES) */
+
+#Menu{
+    display: none;
+}
+
+.Button{
+    position: relative; 
+    top: auto;
+    left: 27%; 
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 16px;
+    
+}
+
+#SideBar{
+    position: flex; 
+    position: relative;
+    width: 300px; 
+    height: 400px; 
+    top: 270px;
+    left: 0.8rem;
+    background-color: #d9cbb0;
+    padding-top: 60px;
+    z-index: 1000;
+    transform: translateY(-570px); /* Ocultamos por completo */
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+    overflow-y: auto; 
+}
+
+#SideBar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+}
+
+#Menu:checked ~ #SideBar{
+    transform: translateY(0); /* Muestra el sidebar */
+}
+
+/* Formulario dentro del Sidebar */
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: static; /* Vuelve a fluir normalmente */
+    padding: 10px;
+}
+legend{
+    color: black; 
+    font-size: 1.5em; 
+    text-align: center;
+    position: static;
+}
+#suscripción{
+    position: static;
+    right: auto;
+    top: auto;
+}
+.enviar{
+    position: static;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 12px;
+}
+
+/* =========================================
+4. MENÚ SECUNDARIO (Menu2)*/
+
+#Menu2{
+    display: none;
+}
+
+.Button2{
+    position: relative; 
+    width: 80px;
+    height: 20px;
+    top: auto;
+    left: auto;
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(3, 3, 3);
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 15px;
+    
+}
+
+#SideBar2{
+    position: fixed; 
+    width: 170px;
+    height: 150px; 
+    top: 80px;
+    right: 0; 
+    background-color: #d9cbb0;
+    padding-top: 60px;
+    z-index: 1000;
+    transform: translateX(180px); /* Ocultamos hacia la derecha */
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+}
+
+#SideBar2 a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #151515;
+    display: block;
+}
+
+#Menu2:checked ~ #SideBar2{
+    transform: translateX(0);
+}
+
+/* =========================================. SECCIÓN PRESENTACIÓN */
+
+#Photo{
+    
+    width: 90%; 
+    max-width: 1200px;
+    margin: 80px auto 0; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: flex-start; 
+    justify-content: left; 
+}
+
+/* Imagen Personal */
+.Photo{
+    border-radius: 100%;
+    width: 400px; 
+    height: 400px;
+    position: static; 
+    margin: 20px;
+    
+    /* Sombra y Transición */
+    box-shadow: 10px 8px 35px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.Photo:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+}
+
+
+#catalogo article{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 6%;
+    background-color: #ada8a8; /* Color de fondo de la barra */
+    margin: 20px 0;        
+    height: 170px;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19);
+}
+.stuar{
+    width: 150px;
+    height: 150px;
+    border-radius: 22%;
+    padding: 10px;
+    margin: 0px;
+}
+.pets1 p,legend{
+    padding: 20px;
+    margin:30px;
+    display: flex;
+    position: relative;
+    top:-20px;
+}
+.cachorro{
+    width: 150px;
+    height: 150px;
+    border-radius: 22%;
+    padding: 10px;
+}
+.pets2 p,legend{
+    padding: 20px;
+    margin:30px;
+    display: flex;
+    position: relative;
+    top:-20px;
+}
+.kingkong{
+    width: 150px;
+    height: 150px;
+    border-radius: 22%;
+    padding: 10px;
+}
+.pest3 p,legend{
+    padding: 20px;
+    margin:30px;
+    display: flex;
+    position: relative;
+    top:-20px;
+}
+
+
+footer {
+    background: rgba(56, 54, 54, 0.953);
+    color: #fff;
+    padding: 30px 20px 10px 20px;
+    border-top: 2px solid rgb(150, 149, 145);
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    color: rgb(154, 153, 149);
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: rgb(102, 102, 100);
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #25D366;
+    color: #fff !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.whatsapp-btn img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.whatsapp-btn:hover {
+    background: #20b954;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 1px solid rgb(162, 162, 158);
+    padding-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* =========================================
+6. RESPONSIVE MEDIA QUERIES*/
+
+
+    /* <!-- No es responsy por mala practica , posicion flex y era display flex --> */
+
+
+@media (max-width: 768px) {
+    
+    /* Ajuste de fuentes para títulos grandes */
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    /* En pantallas pequeñas, la presentación se apila verticalmente */
+    #Photo {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* La imagen se hace más pequeña en móviles */
+    .Photo {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    /* El sidebar ya no desplaza la página */
+    #Menu:checked ~ #Page,
+    #Menu2:checked ~ #Page {
+        margin-left: 0;
+    }
+}

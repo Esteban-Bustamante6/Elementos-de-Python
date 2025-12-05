@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body style="background-color: rgb(121, 125, 125);">
+    <header id="EBL">
+        <div class="tooltip-container" >
+            
+            <legend id="E" style="font-size: 1.8em; color: black;">Esteban Bustamante Londoño</legend>
+            
+            <div class="tooltip-box" id="E">
+                Construyendo el Futuro con Codigo y Dedicacion ...
+            </div>
+            
+
+        </div>
+        <img src="img/teatro.png" alt="Icono"class="photo">
+        <input type = "checkbox" id = "Menu" hidden>
+            <label for = "Menu" class = "Button"> Date</label>
+        <!-- parte de Datos personales -->
+
+
+        <nav id = "SideBar">
+            <legend>Datos</legend>
+            <div class="input-group">
+
+                <label for="Name">name and lastname:</label>
+                <input type="text" id="Name" name="Nombre"  placeholder="Nombre" required>
+
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="Email"  placeholder="Email"required>
+
+                <label for="telefono">Phone:</label>
+                <input type="tel" id="telefono" name="telefono"  placeholder="telefono" required>
+
+                <label for="mensaje">message:</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="mensaje" ></textarea>
+
+                
+
+                <label for="suscripción">Sucrip</label>
+                <input type="checkbox" id="suscripción" name="Aceptar-tyc" required>
+                
+            </div>
+            <button type="submit" class="enviar">Send</button>
+
+            
+        </nav>
+
+        <!-- Boton de mennu ´principal -->
+        <input type = "checkbox" id = "Menu2" hidden>
+        <label for = "Menu2" class = "Button2"> &#9776; Menu </label>
+
+        <nav id = "SideBar2">
+            <ul>
+                <li><a href="mascotas.html">Pets</a></li>
+            </ul>
+        </nav>
+        
+        
+    </header>
+
+    <section>
+        
+        <div id="Photo"> <img src="img/Captura.PNG" alt="Foto Personal" class="Photo">
+            <h1 id="presentation">My presentation</h1>
+            <hr class="hr">
+            <p class="esteban">Hello, I'm Esteban Bustamante, I'm 21 years old. I like technology. I'm intrigued to know how these applications work, and I had the opportunity to develop an API. When I developed this API, I became quite interested in programming. In fact, I'm studying a technology in Software Analysis and Development at the Sena educational institution.</p>
+            <br>
+            <br>
+            <div id="Botoness">
+                <input type="checkbox" id="togglePrevia" hidden>
+                <label for="togglePrevia" class="btn-visualizador">
+                    Git Hub
+                </label>
+                <div id="contenedorPrevia">
+                    <label for="togglePrevia" class="btn-cerrar">
+                        Closep [X]
+                    </label>
+                    <iframe id="paginaExterna" src="img/httpsgithub.comEstebanBustamante6.PNG" frameborder="0" width="800px" height="800px"></iframe>
+                </div>
+                <button type="button" class="curriculum"><a href="img/Curriculum EBL .pdf" download="Mi_Curriculum_Esteban.pdf" style="text-decoration: none;">Download curriculum</a></button>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+            <h3>My Slogan</h3>
+            <p>"Building the future with code and dedication"</p>
+            </div>
+
+            <div class="footer-section">
+            <h3>Ubic</h3>
+            <p>Riwiii</p>
+            </div>
+
+            <div class="footer-section">
+            <h3>PQRS</h3>
+            <a href="#">Send of Solict</a>
+            </div>
+
+            <div class="footer-section">
+            <h3>Contact</h3>
+            <a class="whatsapp-btn" href="https://wa.me/573226085549" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> 
+                WhatsApp
+            </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 E.B.L..- All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- No es responsy por mala practica , posicion flex y era display flex -->
+    
+    
+</body>
+</html>

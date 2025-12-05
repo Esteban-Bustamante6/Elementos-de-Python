@@ -1,0 +1,307 @@
+nav{
+    text-align: center;
+    font-size: 01rem;
+    box-shadow: 0 0 80px rgba(121, 219, 206, 0.4);
+    border-radius: 15px;
+    padding: 2px 0px;
+    margin: 1rem 0 0.5rem;    
+    
+}
+li.Lista{
+    display: inline;
+    padding: 20px;
+    margin: 2rem;    
+}
+
+#disponibles{
+    
+    width:100%;
+    height: 80px;
+    display: flex;
+    border: 2px solid #333333; /* 2px de ancho, sólido, color gris oscuro */
+    background-color: #a6e4e7ea; /* Fondo ligero para destacarlo */
+    border-radius: 8px; /* Bordes redondeados */
+
+}
+
+
+/* Boton de biologia */
+#Biologia{
+    display: none;
+}
+.Button{
+    position: fixed;
+    top: 20px;
+    left: -557px;
+    padding: 10px;
+    background-color: #caeee6;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 16px;
+    position: sticky;
+    position: relative;
+}
+
+/*  */
+#divBio{
+    position: fixed;
+    width: 350px;
+    height: 440px;
+    border-radius: 10px;
+    top: 40px;
+    left: 100px;
+    background-color: #b1ced1;
+    padding-top: 60px;
+    z-index: 1000;
+    transform: translateY(-1100px);
+    transition: transform 0.3s ease;
+    position: sticky;
+    position: relative;
+
+}
+
+#divBio a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+}
+
+#Biologia:checked ~ #divBio{
+    transform: translateY(0);
+}
+
+#Biologia:checked ~ #Page{
+    margin-left: 250px;
+}
+
+#Page{
+    font-family: sans-serif;
+    margin-top: 2rem;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+    padding: 10px;
+}
+
+
+
+/* Boton de matematica */
+#Matematica{
+    display: none;
+    position: sticky;
+
+}
+.Button2{
+    position: fixed;
+    position: sticky;
+    top:-500px;
+    left: 20px;
+    padding: 10px;
+    background-color: #caeee6;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 16px;
+    position: relative;
+
+}
+
+#divMate{
+    position: fixed;
+    position: sticky;
+
+    width: 350px;
+    height: 440px;
+    border-radius: 11px;
+    top: -480px;
+    left: 710px;
+    background-color: #b1ced1;
+    padding-top: 60px;
+    z-index: 1000;
+    transform: translateY(-2120px);
+    
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    position: relative;
+    
+
+}
+
+#divMate a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+    
+
+}
+
+#Matematica:checked ~ #divMate{
+    transform: translateY(0);
+}
+
+#Matematica:checked ~ #Page{
+    margin-left: 250px;
+}
+
+#Page{
+    font-family: sans-serif;
+    margin-top: 2rem;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+    padding: 10px;
+    
+
+}
+
+
+/* Boton de politica */
+#Politica{
+    display: none;
+}
+.Button3{
+    position: fixed;
+    top:-1020px;
+    left: 600px;
+    padding: 10px;
+    background-color: #caeee6;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 16px;
+    position: sticky;
+    position: relative;
+    
+
+}
+
+#divPol{
+    position: fixed;
+    width: 360px;
+    height: 440px;
+    border-radius: 11px;
+    top: -1000px;
+    left: 76%;
+    background-color: #b1ced1;
+    padding-top: 60px;
+    z-index: 1000;
+    transform: translateY(-2500px);
+    transition: transform 0.3s ease;
+    position: sticky;
+    position: relative;
+    
+}
+
+#divPol a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+}
+
+#Politica:checked ~ #divPol{
+    transform: translateY(0);
+}
+
+#Politica:checked ~ #Page{
+    margin-left: 250px;
+}
+
+#Page{
+    font-family: sans-serif;
+    margin-top: 2rem;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+    padding: 10px;
+}
+
+#navv{
+    width: 100%;
+    height: 50px;
+}
+
+/* Imagenes de los cursos */
+.titleBio{
+    color: aqua;
+    font-size: 1.5em;
+    position: relative;
+    top: -20px;
+
+}
+.bio{
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    border: 3px solid color(gold);
+}
+
+.titleMate{
+    color: aqua;
+    font-size: 1.5em;
+    position: relative;
+    top: -20px;
+}
+.mate{
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    border: 3px solid color(gold);
+}
+.titlePol{
+    color: aqua;
+    font-size: 1.5em;
+    position: relative;
+    top: -20px;
+}
+.poli{
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    border: 3px solid color(gold);
+}
+.fondo{
+    position:static;
+    width: 100%;
+    height: 600px;
+    
+}
+
+
+
+@media (max-width: 600px) {
+
+    /* --- Botones Fijos (Centrar y Apilar) --- */
+    
+    .Button, .Button2, .Button3 {
+        /* Se usa 'relative' y 'transform' para centrar el botón independientemente del 'left' */
+        position: relative; 
+        /* Si se dejan fixed, se mueven */
+        
+        /* Ajustar la posición y el tamaño para que quepan */
+        display: block; /* Ocupa todo el ancho disponible */
+        width: 80%;
+        margin: 10px auto; /* Centrar el botón */
+        top: auto; /* Anular la posición fixed original */
+        left: auto; /* Anular la posición fixed original */
+    }
+
+    /* --- Paneles Interactivos (Ocupar casi todo el ancho) --- */
+
+    #divBio, #divMate, #divPol {
+        /* Reducir el ancho y centrar */
+        width: 90%;
+        left: 5%; /* 5% de margen a la izquierda para centrar */
+        top: 100px; /* Subirlo un poco para que no choque con el botón */
+        height: 60vh; /* Usar altura del viewport (vh) para que el panel no sea tan grande */
+        
+        /* Aseguramos que la transición de despliegue siga funcionando correctamente */
+        transform: translateY(-200vh); /* Desplazamos más para que se oculte completamente */
+    }
+
+    /* Ajustar las imágenes dentro de los paneles */
+    #divBio img, #divMate img, #divPol img {
+        width: 90%;
+        height: auto;
+    }
+}

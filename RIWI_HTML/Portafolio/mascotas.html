@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas</title>
+    <link rel="stylesheet" href="pets.css">
+</head>
+<body>
+    <header id="EBL">
+        <div class="tooltip-container" >
+            
+            <legend id="E" style="font-size: 1.8em; color: black;">My Pets</legend>
+            
+            <div class="tooltip-box" id="E">
+                I have a catalog of beautiful and exotic animals ...
+            </div>
+            
+
+        </div>
+        <img src="img/teatro.png" alt="Icono"class="photo">
+        <input type = "checkbox" id = "Menu" hidden>
+            <label for = "Menu" class = "Button"> Date</label>
+        <!-- parte de Datos personales -->
+
+
+        <nav id = "SideBar">
+            <legend>Datos</legend>
+            <div class="input-group">
+
+                <label for="Name">name and lastname:</label>
+                <input type="text" id="Name" name="Nombre"  placeholder="Nombre" required>
+
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="Email"  placeholder="Email"required>
+
+                <label for="telefono">Phone:</label>
+                <input type="tel" id="telefono" name="telefono"  placeholder="telefono" required>
+
+                <label for="mensaje">message:</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="mensaje" ></textarea>
+
+                
+
+                <label for="suscripción">Sucrip</label>
+                <input type="checkbox" id="suscripción" name="Aceptar-tyc" required>
+                
+            </div>
+            <button type="submit" class="enviar">Send</button>
+
+            
+        </nav>
+        
+        <!-- Boton de mennu ´principal -->
+        <input type = "checkbox" id = "Menu2" hidden>
+        <label for = "Menu2" class = "Button2"> &#9776; Menu </label>
+
+        <nav id = "SideBar2">
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+            </ul>
+        </nav>
+        
+        
+    </header>
+
+    <main>
+        <section id="catalogo">
+            <article>
+                <img src="img/Pets1.PNG" alt="Stuaar" class="stuar">
+                <div class="pets1">
+                    <legend>Stuark</legend>
+                    <p>He's a fascinating mouse who's been with me since I was little; he's always with me and watches over me while I sleep.</p>
+                </div>
+            </article>
+            <article>
+                <img src="img/Pets2.PNG" alt="Cachorro" class="cachorro">
+                <div class="pets2">
+                    <legend>Cachorro</legend>
+                    <p>The puppy is a purebred dog, the most expensive in the neighborhood; he is 15 years old, still young.</p>
+                </div>
+            </article>
+            <article>
+                <img src="img/Pets3.PNG" alt="king" class="kingkong">
+                <div class="pets3">
+                    <legend>King Kong</legend>
+                    <p>This is my dog ​​King Kong. He's 3 years old and a very hyperactive dog, nicknamed "The Destroyer." He was rescued from the streets and is now the happiest little dog.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+            <h3>My Slogan</h3>
+            <p>"Building the future with code and dedication"</p>
+            </div>
+
+            <div class="footer-section">
+            <h3>Ubic</h3>
+            <p>Riwiii</p>
+            </div>
+
+            <div class="footer-section">
+            <h3>PQRS</h3>
+            <a href="#">Send of Solict</a>
+            </div>
+
+            <div class="footer-section">
+            <h3>Contact</h3>
+            <a class="whatsapp-btn" href="https://wa.me/573226085549" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> 
+                WhatsApp
+            </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 E.B.L..- All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

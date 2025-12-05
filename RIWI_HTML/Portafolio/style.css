@@ -1,0 +1,437 @@
+
+body {
+    
+    margin: 0; 
+    padding: 0;
+}
+
+/* Encabezado Principal */
+#EBL {
+    border-radius: 2px;
+    background-color: antiquewhite;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 20px;
+    box-sizing: border-box; 
+}
+
+/* Contenido Principal de la Página */
+#Page {
+    font-family: sans-serif;
+    margin-top: 2rem;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+    padding: 10px;
+}
+
+/* Desplazamiento de la página cuando UN menú está activo */
+#Menu:checked ~ #Page,
+#Menu2:checked ~ #Page {
+    margin-left: 250px;
+}
+
+/* =========================================
+. TOOLTIP Y PHOTO ICONO (Header)*/
+
+.tooltip-box {
+    opacity: 0;             
+    visibility: hidden;     
+    transition: opacity 0.3s; /* Transición ajustada a 0.3s */
+    position: absolute;
+    background: antiquewhite;
+    color: #fff;
+    font-size: 1em;
+    padding: 2px 2px;
+    left: 100px;
+    border-radius: 4px;
+}
+
+.tooltip-container:hover .tooltip-box {
+    opacity: 1;             
+    visibility: visible;
+}
+
+#E{
+    position: relative;
+    top: -2px;
+    color: black;
+    margin: 0;
+    font-size: 1.8em;
+}
+.photo{
+    position: relative;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    top: 0; 
+    left: -688px; 
+    margin-left: 10px;
+}
+
+/* =========================================
+MENÚ PRINCIPAL (DATOS PERSONALES) */
+
+#Menu{
+    display: none;
+}
+
+.Button{
+    position: relative; 
+    top: auto;
+    left: 27%; 
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 16px;
+    
+}
+
+#SideBar{
+    position: flex; 
+    position: relative;
+    width: 300px; 
+    height: 400px; 
+    top: 270px;
+    left: 0.8rem;
+    background-color: #d9cbb0;
+    padding-top: 60px;
+    z-index: 1000;
+    transform: translateY(-570px); /* Ocultamos por completo */
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+    overflow-y: auto; 
+}
+
+#SideBar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+}
+
+#Menu:checked ~ #SideBar{
+    transform: translateY(0); /* Muestra el sidebar */
+}
+
+/* Formulario dentro del Sidebar */
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: static; /* Vuelve a fluir normalmente */
+    padding: 10px;
+}
+legend{
+    color: black; 
+    font-size: 1.5em; 
+    text-align: center;
+    position: static;
+}
+#suscripción{
+    position: static;
+    right: auto;
+    top: auto;
+}
+.enviar{
+    position: static;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 12px;
+}
+
+/* =========================================
+4. MENÚ SECUNDARIO (Menu2)*/
+
+#Menu2{
+    display: none;
+}
+
+.Button2{
+    position: relative; 
+    width: 80px;
+    height: 20px;
+    top: auto;
+    left: auto;
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 15px;
+    
+}
+
+#SideBar2{
+    position: fixed; 
+    width: 170px;
+    height: 150px; 
+    top: 80px;
+    right: 0; 
+    background-color: #d9cbb0;
+    padding-top: 60px;
+    z-index: 1000;
+    transform: translateX(180px); /* Ocultamos hacia la derecha */
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+}
+
+#SideBar2 a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+}
+
+#Menu2:checked ~ #SideBar2{
+    transform: translateX(0);
+}
+
+/* =========================================. SECCIÓN PRESENTACIÓN */
+
+#Photo{
+    
+    width: 90%; 
+    max-width: 1200px;
+    margin: 80px auto 0; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: flex-start; 
+    justify-content: left; 
+}
+
+/* Imagen Personal */
+.Photo{
+    border-radius: 100%;
+    width: 400px; 
+    height: 400px;
+    position: static; 
+    margin: 20px;
+    
+    /* Sombra y Transición */
+    box-shadow: 10px 8px 35px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.Photo:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+}
+
+/* Título */
+#presentation{
+    position: static; 
+    margin-top: 20px;
+    
+    text-shadow: 
+        1px 1px 0 #000,
+        1px 1px 0 #000,
+        5px 5px 10px #333;
+}
+.esteban {
+    width: 700px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    color: #333; 
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.3rem;
+    padding: 0;
+    position: relative; 
+    top: -330px;
+    left: 460px;
+}
+.hr{
+    border: 3px solid #333;
+    width: 160px;
+    margin: 10px 0 20px; 
+    position: relative; 
+    top: 60px;
+    left: -190px;
+}
+
+#Botoness{
+    position: static;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.github, .curriculum{
+    border-radius: 12px;
+    height: 40px;
+    margin: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.github{
+    background-color: #333;
+    color: #ffffff;
+}
+.curriculum{
+    color: #1a1818;
+}
+
+#Botoness{
+    position: relative;
+    top: -280px;
+    left: 150px;
+}
+
+.btn-visualizador {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #101010;
+    color: white;
+    border-radius: 5px;
+
+}
+
+/* Contenedor de la previsualización: Fijo y Oculto */
+#contenedorPrevia {
+    position: fixed; /* Fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro (overlay) */
+    z-index: 9999; 
+    
+    /* ESTADO INICIAL: OCULTO */
+    visibility: hidden; 
+    opacity: 0; 
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* iframe (Estilo visual) */
+#paginaExterna {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 87%;
+    height: 87%;
+    border-radius: 8px;
+    transform: translate(-50%, -50%); 
+}
+
+/* LÓGICA CLAVE: Cuando el checkbox esté marcado, muestra el contenedor. */
+#togglePrevia:checked ~ #contenedorPrevia {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn-cerrar {
+    position: absolute;
+    top: 50px;
+    right: 10%; /* Posicionado a la derecha del iframe */
+    font-size: 1.5em;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+
+footer {
+    background: rgba(56, 54, 54, 0.953);
+    color: #fff;
+    padding: 30px 20px 10px 20px;
+    border-top: 2px solid rgb(150, 149, 145);
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    color: rgb(154, 153, 149);
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: rgb(102, 102, 100);
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #25D366;
+    color: #fff !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.whatsapp-btn img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.whatsapp-btn:hover {
+    background: #20b954;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 1px solid rgb(162, 162, 158);
+    padding-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* =========================================
+6. RESPONSIVE MEDIA QUERIES*/
+
+
+    /* <!-- No es responsy por mala practica , posicion flex y era display flex --> */
+
+
+@media (max-width: 768px) {
+    
+    /* Ajuste de fuentes para títulos grandes */
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    /* En pantallas pequeñas, la presentación se apila verticalmente */
+    #Photo {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* La imagen se hace más pequeña en móviles */
+    .Photo {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    /* El sidebar ya no desplaza la página */
+    #Menu:checked ~ #Page,
+    #Menu2:checked ~ #Page {
+        margin-left: 0;
+    }
+}
